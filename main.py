@@ -7,7 +7,7 @@ app = ApplicationBuilder().token("TOKEN").build()
 app.add_handler(CommandHandler('hi', hi_command))
 app.add_handler(CommandHandler('time', time_command))
 app.add_handler(CommandHandler('help', help_command))
-app.add_handler(CommandHandler('count', sum_command))
+app.add_handler(CommandHandler('count', count_command))
 
 
 print('server start')
