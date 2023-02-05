@@ -17,11 +17,7 @@ async def time_command(update: Update, context: CallbackContext):
     await update.message.reply_text(f'{datetime.datetime.now().time()}')
 
 
-async def sum_command(update: Update, context: CallbackContext):
+async def count_command(update: Update, context: CallbackContext):
     log(update, context)
     msg = update.message.text
-    print(msg)
-    items = msg.split() # /sum 123 534543
-    x = int(items[1])
-    y = int(items[2])
-    await update.message.reply_text(f'{x} + {y} = {x+y}')
+    await update.message.reply_text(f'Your result is {eval(msg.split(" ")[1])}')
